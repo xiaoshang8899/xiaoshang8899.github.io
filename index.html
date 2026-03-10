@@ -587,6 +587,176 @@ onmouseover="stop()" onmouseout="start()">
 <p class="STYLE5 STYLE36"></p>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>彤愿文化 · 小区电子屏广告招商</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+text-align:center;
+}
+
+h1{
+color:#d90000;
+}
+
+.container{
+width:90%;
+margin:auto;
+}
+
+.box{
+background:white;
+padding:20px;
+margin:20px;
+border-radius:10px;
+box-shadow:0 0 10px #ccc;
+}
+
+.price{
+font-size:22px;
+color:red;
+font-weight:bold;
+}
+
+button{
+background:red;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+font-size:18px;
+cursor:pointer;
+}
+
+img{
+width:300px;
+margin:10px;
+border-radius:5px;
+}
+
+.phone{
+font-size:28px;
+color:red;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>彤愿文化 · 小区电子屏广告招商</h1>
+
+<div class="container">
+
+<div class="box">
+<h2>覆盖小区数量</h2>
+<h3>15个小区门口电子屏</h3>
+<p>每天上万人看到你的广告</p>
+</div>
+
+
+<div class="box">
+<h2>广告套餐价格</h2>
+
+<p>基础套餐</p>
+<div class="price">100元 / 3个月</div>
+
+<p>商家推广套餐</p>
+<div class="price">300元 / 6个月</div>
+
+<p>全年推广套餐</p>
+<div class="price">600元 / 12个月</div>
+
+</div>
+
+
+<div class="box">
+<h2>广告案例</h2>
+
+<img src="https://via.placeholder.com/300x200">
+<img src="https://via.placeholder.com/300x200">
+<img src="https://via.placeholder.com/300x200">
+
+</div>
+
+
+<div class="box">
+<h2>LED屏招商海报</h2>
+
+<img src="https://via.placeholder.com/600x400">
+
+</div>
+
+
+<div class="box">
+
+<h2>广告投放在线下单</h2>
+
+<form>
+
+姓名<br>
+<input type="text"><br><br>
+
+电话<br>
+<input type="text"><br><br>
+
+广告内容<br>
+<textarea rows="4" cols="40"></textarea>
+
+<br><br>
+
+<button type="submit">提交广告需求</button>
+
+</form>
+
+</div>
+
+
+<div class="box">
+
+<div class="phone">
+广告投放热线<br>
+021-56127086
+</div>
+
+<br>
+
+<a href="tel:02156127086">
+<button>点击拨打电话</button>
+</a>
+
+</div>
+
+
+<div class="box">
+
+访问人数：
+<span id="counter">加载中...</span>
+
+</div>
+
+</div>
+
+<script>
+
+fetch('https://api.countapi.xyz/hit/xiaoshang8899/ledad')
+.then(response => response.json())
+.then(data => {
+document.getElementById("counter").innerHTML = data.value;
+});
+
+</script>
+
+</body>
+</html>
 
 
 

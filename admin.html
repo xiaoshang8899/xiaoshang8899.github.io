@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后台统计</title>
 
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+<script src="config.js"></script>
+
+</head>
+
+<body>
+
+<h2>广告数据统计</h2>
+<div id="data"></div>
+
+<script>
+
+const result = {};
+
+// 拉取数据
+db.collection("clicks").get().then(res=>{
+
+    res.forEach(doc=>{
+        let d = doc.data();
+
+        if(!result[d.adId]){
+            result[d.adId] = {tel:0,wechat:0};
+        }
+
+        result[d.adId][d.type]++;
+    });
+
+    // 显示
+    let html = "";
+
+    for(let id in result){
+        html += `
+        <p>
+        ${id} ：电话 ${result[id].tel} 次 |
+        微信 ${result[id].wechat} 次
+        </p>
+        `;
+    }
+
+    document.getElementById("data").innerHTML = html;
+
+});
+
+</script>
+
+</body>
+</html>

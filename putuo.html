@@ -1,87 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-
-<!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-
-<script>
-  // config（你的）
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="上海普陀区小区门口电子屏广告招商，1.2万/年精准投放。真如、中山北路等社区广告效果如何？">
+    <meta name="keywords" content="上海普陀电子屏广告,普陀小区门口广告,普陀社区广告位招商,真如广告投放">
+    <title>上海普陀区小区门口电子屏广告招商 | 1.2万/年社区精准获客</title>
+    <style>
+        body {font-family: "Microsoft YaHei", sans-serif; margin:0; padding:0; line-height:1.8; color:#333;}
+        .header {background:#1a1a1a; color:white; padding:15px 0; text-align:center;}
+        .hero {background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url('https://via.placeholder.com/1920x650/1a1a1a/ffffff?text=普陀区社区电子屏') center/cover; color:white; text-align:center; padding:130px 20px;}
+        .container {max-width:1200px; margin:0 auto; padding:30px 20px;}
+        .btn {background:#e60012; color:white; padding:15px 40px; text-decoration:none; border-radius:6px; font-weight:bold; font-size:18px; display:inline-block; margin:15px 0;}
+        .faq {background:#f9f9f9; padding:20px; border-radius:8px; margin:30px 0;}
+        footer {background:#1a1a1a; color:#ccc; text-align:center; padding:40px 20px;}
+    </style>
 </head>
-  
-<meta charset="utf-8">
-<title>广告墙</title>
-
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-<script src="config.js"></script>
-
-<style>
-body{font-family:Arial;background:#f5f5f5;}
-.container{column-count:4;padding:10px;}
-img{width:100%;margin-bottom:10px;border-radius:10px;}
-</style>
-</head>
-
 <body>
 
-<h2 style="text-align:center;">小区广告展示</h2>
+    <div class="header">
+        <h2>彤愿文化传播 · 上海社区电子屏广告</h2>
+        <p>
+            <a href="index.html" style="color:#fff; margin:0 8px;">首页</a> | 
+            <a href="jingan.html" style="color:#fff; margin:0 8px;">静安</a> | 
+            <a href="putuo.html" style="color:#ffcc00; margin:0 8px;">普陀</a> | 
+            <a href="minhang.html" style="color:#fff; margin:0 8px;">闵行</a>
+        </p>
+    </div>
 
-<div class="container" id="gallery"></div>
+    <div class="hero">
+        <h1>上海普陀区小区门口电子屏广告招商</h1>
+        <p style="font-size:26px;">1.2万元 / 年 · 真如、中山北路等成熟社区</p>
+        <a href="#contact" class="btn">立即咨询投放方案</a>
+    </div>
 
-<script>
+    <div class="container">
+        <h2>普陀区社区电子屏广告招商</h2>
+        <p>重点覆盖真如、长风、中山北路等大型小区门口电子屏。</p>
 
-// 👉 广告数据（你只需要改这里）
-const ads = [
-{
-  id:"ad1",
-  img:"https://picsum.photos/300/400?1",
-  tel:"13800138000",
-  wechat:"https://weixin.qq.com/"
-},
-{
-  id:"ad2",
-  img:"https://picsum.photos/300/400?2",
-  tel:"13900139000",
-  wechat:"https://weixin.qq.com/"
-}
-];
+        <div class="faq">
+            <h3>1. 普陀区电子屏广告多少钱一年？</h3>
+            <p>基础投放<strong>12,000元/年</strong>，含设计与运营。</p>
 
-// 👉 统计函数
-function track(adId,type){
-    db.collection("clicks").add({
-        adId:adId,
-        type:type,
-        time:new Date()
-    });
-}
+            <h3>2. 普陀小区电子屏流量如何？</h3>
+            <p>流量稳定且集中，适合本地生活服务商家精准获客。</p>
 
-// 👉 渲染
-const box = document.getElementById("gallery");
+            <h3>3. 适合哪些商家投放？</h3>
+            <p>餐饮、培训、装修、美容、家政等效果优秀。</p>
 
-ads.forEach(ad=>{
-
-    let div = document.createElement("div");
-
-    div.innerHTML = `
-        <a href="tel:${ad.tel}" onclick="track('${ad.id}','tel')">
-            <img src="${ad.img}">
-        </a>
-
-        <div style="text-align:center;">
-            <a href="tel:${ad.tel}" onclick="track('${ad.id}','tel')">📞打电话</a> |
-            <a href="${ad.wechat}" onclick="track('${ad.id}','wechat')">💬加微信</a>
+            <h3>4. 普陀社区电子屏广告值得投吗？</h3>
+            <p>非常值得，低成本、高频曝光，转化效果明显。</p>
         </div>
-    `;
 
-    box.appendChild(div);
-});
+        <div id="contact">
+            <h2>立即锁定普陀区优质资源</h2>
+            <a href="#" class="btn">领取普陀区投放资料</a>
+            <p>📞 电话咨询 | 💬 微信私信</p>
+        </div>
+    </div>
 
-</script>
-
+    <footer>
+        <p>© 彤愿文化传播 | 上海小区门口电子屏广告</p>
+        <p><a href="index.html" style="color:#fff;">返回首页</a></p>
+    </footer>
 </body>
 </html>
-照片墙收费主页
